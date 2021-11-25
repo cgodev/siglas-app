@@ -1,0 +1,23 @@
+<header class="py-3 mb-3 border-bottom">
+  <div class="container-fluid gap-3 align-items-center">
+    <div class="row flex-column flex-lg-row align-items-center">
+      <div class="col-lg-6 col-12">
+        <div class="col-lg-2 col-12">
+            <figure class="mb-0">
+              <img src="../../../../assets/logo.png" alt="siglasApp" class="img-fluid">
+            </figure>
+        </div>
+      </div>
+      <div class="col-lg-6 col-12">
+        <div class="d-flex align-items-center">
+          <form (ngSubmit)="searchAcronime()" class="form w-100 d-flex " [formGroup]="formSiglas" novalidate>
+            <input type="search" class="form-control" formControlName="criteria"  placeholder="Escribe tu acronimo">
+            <button type="submit" class="btn btn-info ms-3">Buscar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</header>

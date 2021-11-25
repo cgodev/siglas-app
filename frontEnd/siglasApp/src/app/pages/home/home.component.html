@@ -1,0 +1,25 @@
+<div class="container-fluid pb-3">
+  <div class="row">
+    <div class="col-12 col-lg-3">
+      <h3>Historial</h3>
+      <div class="bg-light border rounded-3">
+        <ul class="unstyled"
+        [ngClass]="{historyList: history.length > 0}">
+          <li *ngIf="history.length == 0"> No encontramos historial </li>
+          <li *ngFor="let item of history" (click)='fetchData(item)'>{{item | uppercase}}</li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-12 col-lg-9">
+      <h3>Resultados</h3>
+      <div class="bg-light border rounded-3">
+        <ul class="unstyled">
+          <li *ngIf="currentData.length == 0"> No encontramos resultados </li>
+          <li *ngFor="let item of currentData">
+            {{item.lf}}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
