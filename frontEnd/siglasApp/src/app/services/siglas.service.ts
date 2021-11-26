@@ -27,7 +27,7 @@ export class SiglasService {
       }
     })
       .then(function (response) {
-        console.table(response)
+        /* console.table(response) */
         if (response.data.length > 0) {
           result = response.data[0].lfs
         }

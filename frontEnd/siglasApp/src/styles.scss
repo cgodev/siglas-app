@@ -46,6 +46,8 @@ body{
         padding-block: .5rem;
     }
     &.historyList{
+      max-height: 400px;
+      overflow-y: scroll;
         li{
             cursor: pointer;
             transition: all .3s ease-in-out;

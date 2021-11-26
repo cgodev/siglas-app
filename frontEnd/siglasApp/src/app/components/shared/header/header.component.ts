@@ -3,6 +3,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Store } from '@ngrx/store';
 import { SiglasService } from 'src/app/services/siglas.service';
 import * as accionesSiglas from 'src/app/redux/actions';
+import { StoredataService } from 'src/app/services/storedata.service';
 
 @Component({
   selector: 'app-header',
@@ -17,6 +18,7 @@ export class HeaderComponent implements OnInit {
   constructor(
     private siglasService: SiglasService,
     private store: Store<any>,
+    private storeDataService: StoredataService
     ) { }
 
   ngOnInit(): void {
@@ -35,11 +37,12 @@ export class HeaderComponent implements OnInit {
 
   async searchAcronime(){
     let criteria = this.formSiglas.controls['criteria'].value.trim();
-    this.history = this.history.concat(criteria);
     this.store.dispatch( new accionesSiglas.SetHistory( this.history ) );
-    
+    let data = {
+      criteria: criteria
+    }
     await this.siglasService.fetchAcronimes(criteria);
-
+    await this.storeDataService.saveHistory(data);
     /* console.log(response) */
     
 
