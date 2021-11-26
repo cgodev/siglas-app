@@ -8,7 +8,7 @@
 
 ### Consideraciones
 
-- En este repositorio usted encontrara 2 carpetas (**backend** y **frontend**) con sus respectivos proyectos internamente, accediendo a cada uno de los directorios y ejecutando el comando **npm install** (**para el frontend debe acceder al sub directorio /siglasApp**), usted tendra las dependencias que le permitiran ejecutar tanto el backend como el frontend para la aplicacion de Acronimos.****
+- En este repositorio usted encontrara 2 carpetas (**backend** y **frontend**) con sus respectivos proyectos internamente, accediendo a cada uno de los directorios y ejecutando el comando **npm install** (**para el frontend debe acceder al sub directorio /siglasApp**), usted tendra las dependencias que le permitiran ejecutar tanto el backend como el frontend para la aplicacion de Acronimos.
 - Para el **frontend**: una vez ejecutado npm install podra ejecutar el app con el comando **ng serve -o** lo cual abrira automaticamente el aplicativo en una pestana del navegador
 - Para el **backend** : debemos tener en cuenta que previo a la ejecucion del comando para levantar el servidor http el cual es **nodemon**, debemos tener configurada la instancia del motor de base de datos **mysql** y corriendo en el puerto default **3306**, de no estar en este puerto, debe de modificar el archivo **mysql_connector.js** ubicado en la carpeta **database** y colocar el puerto modificando el parametro host del objeto connection
 
